@@ -7,13 +7,13 @@ namespace DataAccessLayer.Repositories
     public class CategoryRepository : ICategoryDal
     {
         Context c = new Context();
-        public void AddCategory(Category category)
+        public void Insert(Category category)
         {
             c.Add(category);
             c.SaveChanges();
         }
 
-        public void DeleteCategory(Category category)
+        public void Delete(Category category)
         {
             c.Remove(category);
             c.SaveChanges();
@@ -24,12 +24,12 @@ namespace DataAccessLayer.Repositories
             return c.Categories.Find(id);
         }
 
-        public List<Category> ListAllCategory()
+        public List<Category> GetListAll()
         {
             return c.Categories.ToList();
         }
 
-        public void UpdateCategory(Category category)
+        public void Update(Category category)
         {
             c.Update(category);
             c.SaveChanges();

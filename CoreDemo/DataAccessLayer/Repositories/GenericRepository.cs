@@ -3,7 +3,7 @@ using DataAccessLayer.Concrete;
 
 namespace DataAccessLayer.Repositories
 {
-    public class GenericRepository<T> : IGenericDAL<T> where T : class
+    public class GenericRepository<T> : IGenericDal<T> where T : class
     {
         public void Delete(T t)
         {

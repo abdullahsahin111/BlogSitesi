@@ -3,7 +3,7 @@ using EntityLayer.Concrete;
 
 namespace DataAccessLayer.Repositories
 {
-    public class CommentRepository : IGenericDAL<Comment>
+    public class CommentRepository : IGenericDal<Comment>
     {
         public void Delete(Comment t)
         {
